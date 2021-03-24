@@ -1,0 +1,4 @@
+github.com/gorilla/rpc v1.2.0 h1:WvvdC2lNeT1SP32zrIce5l0ECBfbAlmrmSBsuc57wfk=
+github.com/gorilla/rpc v1.2.0/go.mod h1:V4h9r+4sF5HnzqbwIez0fKSpANP0zlYd3qR7p36jkTQ=
+github.com/kdar/httprpc v0.0.0-20140123074835-fef183418ef8 h1:pBluNmgufqbUJN81r2mzcYWCG0pPHp2IkTekYuK6sTc=
+github.com/kdar/httprpc v0.0.0-20140123074835-fef183418ef8/go.mod h1:CX5FDs98E978gbrVp1N8IC/FKzXK9j4g27p6qLnJt2k=
