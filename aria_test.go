@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	"github.com/xzzpig/aria2rpc"
+	"github.com/xzzpig/aria2rpc/types"
 )
 
 var aria = aria2rpc.Aria{
@@ -72,6 +73,14 @@ func TestTellStatus(t *testing.T) {
 
 func TestGetFiles(t *testing.T) {
 	result, err := aria.GetFiles("6718ec25e4b45254")
+	if err != nil {
+		t.Error(err)
+	}
+	t.Log(result)
+}
+
+func TestAddUri(t *testing.T) {
+	result, err := aria.AddUri([]string{"https://dm.phncdn.com/videos/202010/21/362574322/1080P_8000K_362574322.mp4?ttl=1617243704&ri=1638400&rs=4000&hash=663bc32c69135a49c3dedfe4cda841d8"}, types.Aria2Options{})
 	if err != nil {
 		t.Error(err)
 	}
