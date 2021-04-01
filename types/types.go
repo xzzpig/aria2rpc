@@ -9,7 +9,7 @@ type Aria2HttpOptions struct {
 	ConnectTimeout         *int    `json:"connect-timeout"`           //@default 60
 	DryRun                 *bool   `json:"dry-run"`                   //@default false
 	LowestSpeedLimit       *int    `json:"lowest-speed-limit"`        //Close connection if download speed is lower than or equal to this value(bytes per sec). 0 means aria2 does not have a lowest speed limit. You can append K or M (1K = 1024, 1M = 1024K). This option does not affect BitTorrent downloads. @default 0
-	MaxConnectionPerServer **int   `json:"max-connection-per-server"` //@default 1
+	MaxConnectionPerServer *int    `json:"max-connection-per-server"` //@default 1
 	MaxFileNotFound        *int    `json:"max-file-not-found"`        //@default 0
 	MaxTries               *int    `json:"max-tries"`                 //@default 0
 	MinSplitSize           *string `json:"min-split-size"`            //aria2 does not split less than 2*SIZE byte range. For example, let's consider downloading 20MiB file. If SIZE is 10M, aria2 can split file into 2 range [0-10MiB) and [10MiB-20MiB) and download it using 2 sources(if --split >= 2, of course). If SIZE is 15M, since 2*15M > 20MiB, aria2 does not split file and download it using 1 source. You can append K or M (1K = 1024, 1M = 1024K). Possible Values: 1M -1024M @default 20M
